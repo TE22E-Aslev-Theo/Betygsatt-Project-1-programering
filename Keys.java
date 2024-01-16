@@ -3,7 +3,7 @@ import java.awt.event.KeyListener;
 
 public class Keys implements KeyListener{
 
-    public boolean uppclick;
+    public boolean uppclick = false;
 
     @Override
     public void keyTyped(KeyEvent e) {
@@ -12,20 +12,22 @@ public class Keys implements KeyListener{
 
     @Override
     public void keyPressed(KeyEvent e) {
-        char keycode = e.getKeyChar();
+        int keycode = e.getKeyChar();
 
-        if (keycode == 'w'){
+        if (keycode == KeyEvent.VK_SPACE){
             uppclick = true;
         }
     }
 
     @Override
     public void keyReleased(KeyEvent e) {
-        char keycode = e.getKeyChar();
+        int keycode = e.getKeyChar();
 
-        if (keycode == 'w'){
+        if (keycode == KeyEvent.VK_SPACE){
             uppclick = false;
         }
+
+        
     }
     
 }
