@@ -5,6 +5,7 @@ public class Keys implements KeyListener{
 
     public boolean uppclick = false;
 
+
     @Override
     public void keyTyped(KeyEvent e) {
       
@@ -14,8 +15,10 @@ public class Keys implements KeyListener{
     public void keyPressed(KeyEvent e) {
         int keycode = e.getKeyChar();
 
-        if (keycode == KeyEvent.VK_SPACE){
+        if (keycode == KeyEvent.VK_SPACE && uppclick == false){
             uppclick = true;
+            
+            
         }
     }
 
@@ -25,6 +28,7 @@ public class Keys implements KeyListener{
 
         if (keycode == KeyEvent.VK_SPACE){
             uppclick = false;
+        
         }
 
         

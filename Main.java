@@ -6,7 +6,6 @@ import javax.swing.JFrame;
 public class Main extends JFrame{
 
     public static boolean gamestarted = false;
-    public static JButton button;
     public static void main(String[] args) {
         Gamepanel gamepanel = new Gamepanel();
         JFrame frame = new JFrame();
@@ -14,10 +13,10 @@ public class Main extends JFrame{
         frame.setTitle("Flappy Birb");
         frame.setResizable(false);
         frame.setLocation(300,200);
+        frame.add(gamepanel.button);
         frame.add(gamepanel);
         frame.pack();
         frame.setVisible(true);
-        
     }
 
 }
